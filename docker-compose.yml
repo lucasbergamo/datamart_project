@@ -1,0 +1,8 @@
+services:
+  etl-pipeline:
+    build: .  # Construindo a imagem a partir do Dockerfile
+    volumes:
+      - ./data:/app/data  # Mapeando a pasta local 'data' para dentro do contêiner
+    environment:
+      - ENV_VAR=some_value  # Se precisar de variáveis de ambiente
+    command: bash -c "python src/extract.py && python src/transform.py && python src/load.py"  # Definir a sequência de execução
