@@ -1,8 +1,28 @@
 services:
-  etl-pipeline:
-    build: .  # Construindo a imagem a partir do Dockerfile
-    volumes:
-      - ./data:/app/data  # Mapeando a pasta local 'data' para dentro do contêiner
+  # Serviço para o PostgreSQL
+  db:
+    image: postgres:13
+    container_name: postgres_db
     environment:
-      - ENV_VAR=some_value  # Se precisar de variáveis de ambiente
-    command: bash -c "python src/extract.py && python src/transform.py && python src/load.py"  # Definir a sequência de execução
+      POSTGRES_USER: usuario
+      POSTGRES_PASSWORD: senha
+      POSTGRES_DB: meubanco
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Serviço do seu pipeline ETL
+  etl-pipeline:
+    build: .
+    volumes:
+      - ./data:/app/data  # Mapeia a pasta 'data' no contêiner
+    environment:
+      DB_URL: postgresql://usuario:senha@db:5432/meubanco
+    command: bash -c "python src/extract.py && python src/transform.py && python src/load.py"
+    depends_on:
+      - db  # 🔥 Garante que o PostgreSQL inicie antes do ETL
+
+# Volumes para persistência do PostgreSQL
+volumes:
+  postgres_data:
