@@ -9,6 +9,9 @@ Este repositório tem como fim testar os candidatos para vaga de engenheiro de d
 > Para esta vaga buscamos alguém apaixonado por Dados e como disponibilizar de maneira estrutura e eficiente para tomada de decisão sobre esses dados!
 
 
+[Vídeo de Apresentação do Projeto](https://www.youtube.com/watch?v=VL1f52ZxdsU)
+
+
 <details> <summary><strong>☰ SUMÁRIO</strong></summary>
 
 ## 1. Introdução  
