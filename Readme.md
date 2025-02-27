@@ -94,9 +94,9 @@ Passo a Passo:
 
 **1. Clone ou faça o download do Repositório**
 
-- `git clone https://github.com/seu-usuario/seu-projeto.git`
-- [datamart](https://github.com/seu-usuario/seu-projeto.git)
-- `cd seu-projeto`
+- `git@github.com:lucasbergamo/datamart_project.git`
+- [datamart](https://github.com/lucasbergamo/datamart_project/archive/refs/heads/main.zip)
+- `cd datamart_project-main`
 
 **2. Instale o Docker (Se Necessário)**
 Se você ainda não tem o Docker instalado, siga as instruções abaixo:
