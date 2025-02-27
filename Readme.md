@@ -60,27 +60,8 @@ Este projeto é um pipeline ETL (Extract, Transform, Load) que processa dados de
 
 ## Estrutura Final do Projeto
 
-DATAMART/
-│── data/               # Armazena os dados brutos, transformados e refinados
-│   ├── raw/            # Dados brutos (originais)
-│   ├── trusted/        # Dados transformados (intermediários)
-│   ├── refined/        # Dados prontos para análise
-│   └── .gitkeep        # Mantém a pasta no repositório Git
-│
-│── image/              # Armazena imagens para documentação
-│
-│── sql/                # Armazena o resultado das consultas especificadas
-│
-│── src/                # Scripts de ETL (extração, transformação e carga)
-│   ├── extract.py      # Script de extração de dados
-│   ├── transform.py    # Script de transformação dos dados
-│   ├── load.py         # Script de carga dos dados no banco
-│
-│── .env                # Configurações de ambiente (credenciais, conexões, etc.)
-│── docker-compose.yml  # Configuração dos serviços Docker
-│── Dockerfile          # Configuração da imagem Docker
-│── Readme.md           # Documentação do projeto
-│── requirements.txt    # Dependências do Python (bibliotecas necessárias)
+![Estrutura final](image/estrutura_projeto.png)
+
 
 ## Tecnologias Utilizadas
 
