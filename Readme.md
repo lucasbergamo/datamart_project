@@ -99,7 +99,7 @@ Passo a Passo:
 
 - `git@github.com:lucasbergamo/datamart_project.git`
 - [datamart](https://github.com/lucasbergamo/datamart_project/archive/refs/heads/main.zip)
-- `cd datamart_project-main`
+- `cd datamart_project-main` ou `cd datamart_project`
 
 **2. Instale o Docker (Se Necessário)**
 Se você ainda não tem o Docker instalado, siga as instruções abaixo:
